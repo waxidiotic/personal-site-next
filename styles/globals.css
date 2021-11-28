@@ -2,16 +2,35 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --blue-light: theme("colors.blue.600");
+  --blue-dark: theme("colors.blue.500");
+  --orange-light: theme("colors.yellow.600");
+  --orange-dark: theme("colors.yellow.500");
+}
+
 .theme-orange-light {
   --bg-color: theme("colors.gray.100");
   --text-color: theme("colors.gray.900");
-  --accent-color: theme("colors.yellow.600");
+  --accent-color: var(--orange-light);
 }
 
 .theme-orange-dark {
   --bg-color: theme("colors.gray.900");
   --text-color: theme("colors.gray.100");
-  --accent-color: theme("colors.yellow.500");
+  --accent-color: var(--orange-dark);
+}
+
+.theme-blue-light {
+  --bg-color: theme("colors.gray.100");
+  --text-color: theme("colors.gray.900");
+  --accent-color: var(--blue-light);
+}
+
+.theme-blue-dark {
+  --bg-color: theme("colors.gray.900");
+  --text-color: theme("colors.gray.100");
+  --accent-color: var(--blue-dark);
 }
 
 #__next {

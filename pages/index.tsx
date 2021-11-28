@@ -19,7 +19,11 @@ const Home: NextPage = () => {
             <span className="text-accent">New Jersey, USA</span>.
           </div>
           <div className="flex items-center rounded-md shadow-avatar-orange">
-            <Image src={avatarPic} alt="Cartoon depiction of me" />
+            <Image
+              className="rounded-md"
+              src={avatarPic}
+              alt="Cartoon depiction of me"
+            />
           </div>
         </div>
       </main>

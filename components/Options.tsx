@@ -22,15 +22,15 @@ export function Options() {
       >
         <Menu.Items className="absolute right-0 z-10 w-56 mt-2 origin-top-right bg-gray-200 divide-y rounded-md shadow-lg divide-gray-900/10 ring-1 ring-black ring-opacity-5 focus:outline-none">
           <div className="px-1 py-1">
-            <span className="inline-block p-2 text-sm text-gray-900">
-              Accent Colors
-            </span>
+            <span className="inline-block p-2 text-sm">Accent Colors</span>
             <div className="flex">
               <Menu.Item>
                 {({ active }) => (
                   <button
                     className={`${
-                      active ? "bg-accent text-white" : "text-accent"
+                      active
+                        ? "bg-orange-light-mode dark:bg-orange-dark-mode text-white"
+                        : "text-orange-light-mode dark:text-orange-dark-mode"
                     } group flex rounded-md items-center pl-2 py-2 text-sm`}
                   >
                     <TagIcon className="w-5 h-5 mr-2" aria-hidden="true" />
@@ -41,7 +41,9 @@ export function Options() {
                 {({ active }) => (
                   <button
                     className={`${
-                      active ? "bg-blue-500 text-white" : "text-blue-500"
+                      active
+                        ? "bg-blue-light-mode dark:bg-blue-dark-mode text-white"
+                        : "text-blue-light-mode dark:text-blue-dark-mode"
                     } group flex rounded-md items-center pl-2 text-sm`}
                   >
                     <TagIcon className="w-5 h-5 mr-2" aria-hidden="true" />
@@ -51,9 +53,7 @@ export function Options() {
             </div>
           </div>
           <div className="px-1 py-1">
-            <span className="inline-block p-2 text-sm text-gray-900">
-              Dark Mode
-            </span>
+            <span className="inline-block p-2 text-sm">Dark Mode</span>
             <Menu.Item>
               <DarkModeDropdown />
             </Menu.Item>
@@ -77,26 +77,110 @@ function DarkModeDropdown() {
           <div className="space-y-2">
             <RadioGroup.Option
               value="system"
-              className="relative flex px-5 py-4 text-gray-900 rounded-lg shadow-md cursor-pointer focus:outline-none"
+              className={({ active, checked }) =>
+                `${
+                  active
+                    ? "ring-2 ring-offset-2 ring-white ring-opacity-60"
+                    : ""
+                } ${
+                  checked ? "bg-accent bg-opacity-75 text-white" : ""
+                } relative flex px-5 py-4 rounded-lg shadow-md cursor-pointer focus:outline-none hover:shadow-lg`
+              }
             >
               {({ checked }) => (
-                <span className={checked ? "text-accent" : ""}>System</span>
+                <>
+                  <div className="flex items-center justify-between w-full">
+                    <div className="flex items-center">
+                      <div className="text-sm">
+                        <RadioGroup.Label
+                          as="p"
+                          className={`font-medium  ${
+                            checked ? "text-white" : ""
+                          }`}
+                        >
+                          System
+                        </RadioGroup.Label>
+                      </div>
+                    </div>
+                    {checked && (
+                      <div className="flex-shrink-0 text-white">
+                        <CheckIcon className="w-6 h-6" />
+                      </div>
+                    )}
+                  </div>
+                </>
               )}
             </RadioGroup.Option>
             <RadioGroup.Option
               value="dark"
-              className="relative flex px-5 py-4 text-gray-900 rounded-lg shadow-md cursor-pointer focus:outline-none"
+              className={({ active, checked }) =>
+                `${
+                  active
+                    ? "ring-2 ring-offset-2 ring-offset-sky-300 ring-white ring-opacity-60"
+                    : ""
+                } ${
+                  checked ? "bg-accent bg-opacity-75 text-white" : ""
+                } relative flex px-5 py-4 rounded-lg shadow-md cursor-pointer focus:outline-none hover:shadow-lg`
+              }
             >
               {({ checked }) => (
-                <span className={checked ? "text-accent" : ""}>Dark</span>
+                <>
+                  <div className="flex items-center justify-between w-full">
+                    <div className="flex items-center">
+                      <div className="text-sm">
+                        <RadioGroup.Label
+                          as="p"
+                          className={`font-medium  ${
+                            checked ? "text-white" : ""
+                          }`}
+                        >
+                          Dark
+                        </RadioGroup.Label>
+                      </div>
+                    </div>
+                    {checked && (
+                      <div className="flex-shrink-0 text-white">
+                        <CheckIcon className="w-6 h-6" />
+                      </div>
+                    )}
+                  </div>
+                </>
               )}
             </RadioGroup.Option>
             <RadioGroup.Option
               value="light"
-              className="relative flex px-5 py-4 text-gray-900 rounded-lg shadow-md cursor-pointer focus:outline-none"
+              className={({ active, checked }) =>
+                `${
+                  active
+                    ? "ring-2 ring-offset-2 ring-offset-sky-300 ring-white ring-opacity-60"
+                    : ""
+                } ${
+                  checked ? "bg-accent text-white" : ""
+                } relative flex px-5 py-4 rounded-lg shadow-md cursor-pointer focus:outline-none hover:shadow-lg`
+              }
             >
               {({ checked }) => (
-                <span className={checked ? "text-accent" : ""}>Light</span>
+                <>
+                  <div className="flex items-center justify-between w-full">
+                    <div className="flex items-center">
+                      <div className="text-sm">
+                        <RadioGroup.Label
+                          as="p"
+                          className={`font-medium  ${
+                            checked ? "text-white" : ""
+                          }`}
+                        >
+                          Light
+                        </RadioGroup.Label>
+                      </div>
+                    </div>
+                    {checked && (
+                      <div className="flex-shrink-0 text-white">
+                        <CheckIcon className="w-6 h-6" />
+                      </div>
+                    )}
+                  </div>
+                </>
               )}
             </RadioGroup.Option>
             {/* {modes.map((mode) => (
