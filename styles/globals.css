@@ -12,24 +12,28 @@
 .theme-orange-light {
   --bg-color: theme("colors.gray.100");
   --text-color: theme("colors.gray.900");
+  --text-color-dark: theme("colors.gray.100");
   --accent-color: var(--orange-light);
 }
 
 .theme-orange-dark {
   --bg-color: theme("colors.gray.900");
   --text-color: theme("colors.gray.100");
+  --text-color-dark: theme("colors.gray.900");
   --accent-color: var(--orange-dark);
 }
 
 .theme-blue-light {
   --bg-color: theme("colors.gray.100");
   --text-color: theme("colors.gray.900");
+  --text-color-dark: theme("colors.gray.100");
   --accent-color: var(--blue-light);
 }
 
 .theme-blue-dark {
   --bg-color: theme("colors.gray.900");
   --text-color: theme("colors.gray.100");
+  --text-color-dark: theme("colors.gray.900");
   --accent-color: var(--blue-dark);
 }
 

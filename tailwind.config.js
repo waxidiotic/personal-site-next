@@ -16,6 +16,7 @@ module.exports = {
       },
       textColor: {
         primary: "var(--text-color)",
+        dark: "var(--text-color-dark)",
         accent: "var(--accent-color)",
       },
       boxShadow: () => ({
