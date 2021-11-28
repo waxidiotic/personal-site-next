@@ -14,7 +14,7 @@ module.exports = {
       construction: theme("colors.construction.accent"),
     }),
     boxShadow: (theme) => ({
-      avatar: `0px 0px 8px 6px ${theme("colors.construction.accent")}`,
+      avatar: `0px 0px 8px 8px ${theme("colors.construction.accent")}`,
     }),
   },
   variants: {

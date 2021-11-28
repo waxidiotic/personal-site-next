@@ -6,3 +6,19 @@
   @apply bg-construction-dark text-construction-text;
   height: 100vh;
 }
+
+@layer utilities {
+  .bg-growing-underline {
+    background-size: 100% 0.2em;
+    background-position: 0 105%;
+    @apply bg-no-repeat transition-all duration-200;
+  }
+  .bg-growing-underline:hover {
+    background-size: 100% 100%;
+    @apply text-construction-dark;
+  }
+  .bg-growing-underline:focus {
+    background-size: 100% 100%;
+    @apply text-construction-dark;
+  }
+}
