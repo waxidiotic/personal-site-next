@@ -1,5 +1,5 @@
 import { Menu, Transition, RadioGroup } from "@headlessui/react";
-import { Fragment, ReactPropTypes, useEffect, useRef, useState } from "react";
+import { Fragment, useState } from "react";
 import { AdjustmentsIcon } from "@heroicons/react/outline";
 import { TagIcon } from "@heroicons/react/solid";
 
@@ -8,10 +8,7 @@ export function Options() {
     <Menu as="div" className="relative inline-block">
       <div>
         <Menu.Button className="inline-flex justify-center w-full py-2 rounded-md focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75">
-          <AdjustmentsIcon
-            className="w-6 h-6 text-construction-accent"
-            aria-hidden="true"
-          />
+          <AdjustmentsIcon className="w-6 h-6 text-accent" aria-hidden="true" />
         </Menu.Button>
       </div>
       <Transition
@@ -23,9 +20,9 @@ export function Options() {
         leaveFrom="transform opacity-100 scale-100"
         leaveTo="transform opacity-0 scale-95"
       >
-        <Menu.Items className="absolute right-0 z-10 w-56 mt-2 origin-top-right divide-y rounded-md shadow-lg divide-construction-dark/10 bg-construction-text ring-1 ring-black ring-opacity-5 focus:outline-none">
+        <Menu.Items className="absolute right-0 z-10 w-56 mt-2 origin-top-right bg-gray-200 divide-y rounded-md shadow-lg divide-gray-900/10 ring-1 ring-black ring-opacity-5 focus:outline-none">
           <div className="px-1 py-1">
-            <span className="inline-block p-2 text-sm text-construction-dark">
+            <span className="inline-block p-2 text-sm text-gray-900">
               Accent Colors
             </span>
             <div className="flex">
@@ -33,9 +30,7 @@ export function Options() {
                 {({ active }) => (
                   <button
                     className={`${
-                      active
-                        ? "bg-construction-accent text-white"
-                        : "text-construction-accent"
+                      active ? "bg-accent text-white" : "text-accent"
                     } group flex rounded-md items-center pl-2 py-2 text-sm`}
                   >
                     <TagIcon className="w-5 h-5 mr-2" aria-hidden="true" />
@@ -56,7 +51,7 @@ export function Options() {
             </div>
           </div>
           <div className="px-1 py-1">
-            <span className="inline-block p-2 text-sm text-construction-dark">
+            <span className="inline-block p-2 text-sm text-gray-900">
               Dark Mode
             </span>
             <Menu.Item>
@@ -69,7 +64,7 @@ export function Options() {
   );
 }
 
-function DarkModeDropdown(props: any) {
+function DarkModeDropdown() {
   const [selected, setSelected] = useState<"system" | "dark" | "light">(
     "system"
   );
@@ -82,32 +77,26 @@ function DarkModeDropdown(props: any) {
           <div className="space-y-2">
             <RadioGroup.Option
               value="system"
-              className="relative flex px-5 py-4 rounded-lg shadow-md cursor-pointer focus:outline-none text-construction-dark"
+              className="relative flex px-5 py-4 text-gray-900 rounded-lg shadow-md cursor-pointer focus:outline-none"
             >
               {({ checked }) => (
-                <span className={checked ? "text-construction-accent" : ""}>
-                  System
-                </span>
+                <span className={checked ? "text-accent" : ""}>System</span>
               )}
             </RadioGroup.Option>
             <RadioGroup.Option
               value="dark"
-              className="relative flex px-5 py-4 rounded-lg shadow-md cursor-pointer focus:outline-none text-construction-dark"
+              className="relative flex px-5 py-4 text-gray-900 rounded-lg shadow-md cursor-pointer focus:outline-none"
             >
               {({ checked }) => (
-                <span className={checked ? "text-construction-accent" : ""}>
-                  Dark
-                </span>
+                <span className={checked ? "text-accent" : ""}>Dark</span>
               )}
             </RadioGroup.Option>
             <RadioGroup.Option
               value="light"
-              className="relative flex px-5 py-4 rounded-lg shadow-md cursor-pointer focus:outline-none text-construction-dark"
+              className="relative flex px-5 py-4 text-gray-900 rounded-lg shadow-md cursor-pointer focus:outline-none"
             >
               {({ checked }) => (
-                <span className={checked ? "text-construction-accent" : ""}>
-                  Light
-                </span>
+                <span className={checked ? "text-accent" : ""}>Light</span>
               )}
             </RadioGroup.Option>
             {/* {modes.map((mode) => (

@@ -3,13 +3,11 @@ import { Options } from "./Options";
 export function Nav() {
   return (
     <nav className="flex items-center justify-between h-12">
-      <div className="text-2xl font-bold text-construction-accent">
-        Alex Bussey
-      </div>
+      <div className="text-2xl font-bold text-accent">Alex Bussey</div>
       <ul className="flex items-center space-x-8">
         <li>
           <a
-            className="bg-gradient-to-r from-construction-accent to-construction-accent bg-growing-underline"
+            className="bg-gradient-to-r from-accent to-accent bg-growing-underline"
             href="/about"
           >
             About
@@ -17,7 +15,7 @@ export function Nav() {
         </li>
         <li>
           <a
-            className="bg-gradient-to-r from-construction-accent to-construction-accent bg-growing-underline"
+            className="bg-gradient-to-r from-accent to-accent bg-growing-underline"
             href="/uses"
           >
             Uses
@@ -25,7 +23,7 @@ export function Nav() {
         </li>
         <li>
           <a
-            className="bg-gradient-to-r from-construction-accent to-construction-accent bg-growing-underline"
+            className="bg-gradient-to-r from-accent to-accent bg-growing-underline"
             href="/projects"
           >
             Projects

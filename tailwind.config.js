@@ -1,21 +1,20 @@
 module.exports = {
   mode: "jit",
   purge: ["./pages/**/*.{js,ts,jsx,tsx}", "./components/**/*.{js,ts,jsx,tsx}"],
-  darkMode: "class", // or 'media' or 'class'
   theme: {
     extend: {
       colors: {
-        construction: {
-          dark: "#18181B",
-          accent: "#f59e0b",
-          text: "#e4e4e7",
-        },
+        accent: "var(--accent-color)",
       },
-      stoke: (theme) => ({
-        construction: theme("colors.construction.accent"),
-      }),
+      backgroundColor: {
+        primary: "var(--bg-color)",
+      },
+      textColor: {
+        primary: "var(--text-color)",
+        accent: "var(--accent-color)",
+      },
       boxShadow: (theme) => ({
-        avatar: `0px 0px 8px 8px ${theme("colors.construction.accent")}`,
+        "avatar-orange": `0px 0px 8px 8px var(--accent-color)`,
       }),
     },
   },
