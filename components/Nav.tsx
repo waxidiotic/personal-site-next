@@ -37,20 +37,6 @@ export function Nav() {
               aria-expanded="false"
               aria-haspopup="true"
             />
-            <div
-              className="absolute z-10"
-              role="menu"
-              aria-labelledby="color-menu-button"
-            >
-              <button
-                className="w-4 h-4 rounded bg-construction-accent"
-                role="menuitem"
-              />
-              <button
-                className="w-4 h-4 rounded bg-construction-accent"
-                role="menuitem"
-              />
-            </div>
           </div>
         </li>
         <li>
