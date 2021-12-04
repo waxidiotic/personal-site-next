@@ -7,6 +7,7 @@
   --blue-dark: theme("colors.blue.500");
   --orange-light: theme("colors.yellow.600");
   --orange-dark: theme("colors.yellow.500");
+  --orange-faded: theme("colors.yellow.400");
 }
 
 .theme-orange-light {
@@ -14,6 +15,7 @@
   --text-color: theme("colors.gray.900");
   --text-color-dark: theme("colors.gray.100");
   --accent-color: var(--orange-light);
+  --accent-color-faded: var(--orange-faded);
 }
 
 .theme-orange-dark {

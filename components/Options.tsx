@@ -49,12 +49,12 @@ export function Options() {
         <Menu.Items className="absolute right-0 z-10 w-56 mt-2 origin-top-right border-2 divide-y rounded-md shadow-2xl border-accent bg-primary divide-accent/90 ring-1 ring-accent ring-opacity-5 focus:outline-none">
           <div className="px-1 py-1">
             <span className="inline-block p-2 text-sm">Accent Colors</span>
-            <div className="flex">
+            <div className="flex p-2">
               <Menu.Item>
                 {() => (
                   <button
                     className={`${
-                      color === "orange"
+                      selectedColor === "orange"
                         ? "bg-orange-light-mode dark:bg-orange-dark-mode text-dark"
                         : "text-orange-light-mode dark:text-dark"
                     } group flex rounded-md items-center pl-2 py-2 text-sm`}
@@ -71,7 +71,7 @@ export function Options() {
                 {() => (
                   <button
                     className={`${
-                      color === "blue"
+                      selectedColor === "blue"
                         ? "bg-blue-light-mode dark:bg-blue-dark-mode text-dark"
                         : "text-blue-light-mode dark:text-blue-dark-mode"
                     } group flex rounded-md items-center pl-2 text-sm`}
@@ -125,42 +125,6 @@ function DarkModeDropdown({
         >
           <RadioGroup.Label className="sr-only">Dark Mode</RadioGroup.Label>
           <div className="space-y-2">
-            {/* <RadioGroup.Option
-              value="system"
-              className={({ active, checked }) =>
-                `${
-                  active
-                    ? "ring-2 ring-offset-2 ring-white ring-opacity-60"
-                    : ""
-                } ${
-                  checked ? "bg-accent bg-opacity-75 text-primary" : ""
-                } relative flex px-5 py-4 rounded-lg shadow-md cursor-pointer focus:outline-none hover:shadow-lg`
-              }
-            >
-              {({ checked }) => (
-                <>
-                  <div className="flex items-center justify-between w-full">
-                    <div className="flex items-center">
-                      <div className="text-sm">
-                        <RadioGroup.Label
-                          as="p"
-                          className={`font-medium  ${
-                            checked ? "text-primary" : ""
-                          }`}
-                        >
-                          System
-                        </RadioGroup.Label>
-                      </div>
-                    </div>
-                    {checked && (
-                      <div className="flex-shrink-0 text-primary">
-                        <CheckIcon className="w-6 h-6" />
-                      </div>
-                    )}
-                  </div>
-                </>
-              )}
-            </RadioGroup.Option> */}
             <RadioGroup.Option
               value="dark"
               className={({ active, checked }) =>

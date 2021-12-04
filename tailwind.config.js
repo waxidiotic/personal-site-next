@@ -6,6 +6,7 @@ module.exports = {
     extend: {
       colors: {
         accent: "var(--accent-color)",
+        faded: "var(--accent-color-faded)",
         "blue-light-mode": "var(--blue-light)",
         "blue-dark-mode": "var(--blue-dark)",
         "orange-light-mode": "var(--orange-light)",

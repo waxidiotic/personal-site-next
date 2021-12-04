@@ -1,4 +1,5 @@
 import { Options } from "./Options";
+import { OptionsPopover } from "./OptionsPopover";
 
 export function Nav() {
   return (
@@ -31,6 +32,9 @@ export function Nav() {
         </li>
         <li>
           <Options />
+        </li>
+        <li>
+          <OptionsPopover />
         </li>
       </ul>
     </nav>
