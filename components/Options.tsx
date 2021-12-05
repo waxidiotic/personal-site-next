@@ -25,7 +25,7 @@ export function Options() {
             leaveFrom="transform opacity-100 scale-100"
             leaveTo="transform opacity-0 scale-95"
           >
-            <Popover.Panel className="absolute z-10 w-56 p-4 mt-2 text-sm text-black border-2 divide-y divide-gray-300 rounded-md shadow-lg bg-primary border-accent">
+            <Popover.Panel className="absolute z-10 w-56 p-4 mt-2 text-sm text-black border-2 divide-y divide-gray-300 rounded-md shadow-lg dark:text-gray-100 dark:bg-gray-900 bg-primary border-accent">
               <div className="flex flex-col space-y-2">
                 <span>Theme</span>
                 <ThemeChooser />
@@ -45,7 +45,7 @@ function ThemeChooser() {
     <Listbox value={theme} onChange={setTheme}>
       <div className="relative">
         <Listbox.Button className="relative w-full py-2 pl-3 pr-10 text-left bg-white rounded-lg shadow-md cursor-default focus:outline-none focus-visible:ring-2 focus-visible:ring-opacity-75 focus-visible:ring-white focus-visible:ring-offset-accent focus-visible:ring-offset-2 focus-visible:border-accent sm:text-sm">
-          <span className="block truncate">
+          <span className="block truncate dark:text-gray-900">
             {theme === "system"
               ? "System Setting"
               : theme === "dark"
