@@ -1,7 +1,7 @@
 import { Fragment } from "react";
 import { Popover, Transition, Listbox } from "@headlessui/react";
-import { AdjustmentsIcon } from "@heroicons/react/outline";
-import { CheckIcon, SelectorIcon } from "@heroicons/react/solid";
+import { MdSettings } from "react-icons/md";
+import { HiCheck, HiSelector } from "react-icons/hi";
 import { useTheme } from "next-themes";
 
 export function Options() {
@@ -10,7 +10,7 @@ export function Options() {
       {({ open }) => (
         <>
           <Popover.Button className="flex items-center">
-            <AdjustmentsIcon
+            <MdSettings
               className={`w-6 h-6 ${
                 open ? "bg-accent text-dark rounded-md" : "text-accent"
               }`}
@@ -53,10 +53,7 @@ function ThemeChooser() {
               : "Light Mode"}
           </span>
           <span className="absolute inset-y-0 right-0 flex items-center pr-2 pointer-events-none">
-            <SelectorIcon
-              className="w-5 h-5 text-gray-400"
-              aria-hidden="true"
-            />
+            <HiSelector className="w-5 h-5 text-gray-400" aria-hidden="true" />
           </span>
         </Listbox.Button>
         <Transition
@@ -89,7 +86,7 @@ function ThemeChooser() {
                       }
                                 absolute inset-y-0 left-0 flex items-center pl-3`}
                     >
-                      <CheckIcon className="w-5 h-5" aria-hidden="true" />
+                      <HiCheck className="w-5 h-5" aria-hidden="true" />
                     </span>
                   ) : null}
                 </>
@@ -118,7 +115,7 @@ function ThemeChooser() {
                       }
                                 absolute inset-y-0 left-0 flex items-center pl-3`}
                     >
-                      <CheckIcon className="w-5 h-5" aria-hidden="true" />
+                      <HiCheck className="w-5 h-5" aria-hidden="true" />
                     </span>
                   ) : null}
                 </>
@@ -147,7 +144,7 @@ function ThemeChooser() {
                       }
                                 absolute inset-y-0 left-0 flex items-center pl-3`}
                     >
-                      <CheckIcon className="w-5 h-5" aria-hidden="true" />
+                      <HiCheck className="w-5 h-5" aria-hidden="true" />
                     </span>
                   ) : null}
                 </>
