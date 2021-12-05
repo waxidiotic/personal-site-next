@@ -1,6 +1,7 @@
 import { Fragment, useState } from "react";
 import { Popover, Switch, Transition } from "@headlessui/react";
 import { AdjustmentsIcon } from "@heroicons/react/outline";
+import { DocumentIcon } from "@heroicons/react/solid";
 
 export function OptionsPopover() {
   const [darkModeEnabled, setDarkModeEnabled] = useState(false);
@@ -25,9 +26,21 @@ export function OptionsPopover() {
             leaveFrom="transform opacity-100 scale-100"
             leaveTo="transform opacity-0 scale-95"
           >
-            <Popover.Panel className="absolute z-10 w-56 p-4 mt-2 text-sm bg-white divide-y divide-gray-300 rounded-md shadow-lg text-dark">
-              <div className="pb-2">
+            <Popover.Panel className="absolute z-10 w-56 p-4 mt-2 text-sm text-black bg-white divide-y divide-gray-300 rounded-md shadow-lg">
+              <div className="flex flex-col pb-2 space-y-2">
                 <span>Accent Color</span>
+                <div className="flex space-x-2">
+                  <button
+                    className={`text-orange-light-mode border-2 border-accent rounded-md hover:text-white hover:bg-accent p-1`}
+                  >
+                    <DocumentIcon className="w-5 h-5" />
+                  </button>
+                  <button
+                    className={`text-blue-light-mode border-2 border-blue-light-mode rounded-md hover:text-white hover:bg-blue-light-mode p-1`}
+                  >
+                    <DocumentIcon className="w-5 h-5" />
+                  </button>
+                </div>
               </div>
               <div className="flex flex-col pt-2 space-y-2">
                 <span>Dark Mode</span>
