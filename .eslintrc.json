@@ -1,3 +1,28 @@
 {
-  "extends": ["next/core-web-vitals", "prettier"]
+  "plugins": ["import"],
+  "extends": [
+    "next/core-web-vitals",
+    "plugin:import/errors",
+    "plugin:import/warnings",
+    "prettier"
+  ],
+  "rules": {
+    "import/order": [
+      "warn",
+      {
+        "groups": ["builtin", "external", "parent", "sibling", "index"],
+        "pathGroups": [
+          // Sort absolute root imports before parent imports
+          {
+            "pattern": "/**'",
+            "group": "parent",
+            "position": "before"
+          }
+        ],
+        "newlines-between": "always"
+      }
+    ],
+
+    "import/no-default-export": "error"
+  }
 }

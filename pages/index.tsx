@@ -1,7 +1,8 @@
 import Head from "next/head";
 import Image from "next/image";
-import avatarPic from "../public/me.png";
 import type { NextPage } from "next";
+
+import avatarPic from "../public/me.png";
 
 const Home: NextPage = () => {
   return (
@@ -31,4 +32,5 @@ const Home: NextPage = () => {
   );
 };
 
+// eslint-disable-next-line import/no-default-export
 export default Home;
