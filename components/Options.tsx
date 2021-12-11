@@ -25,7 +25,7 @@ export function Options() {
             leaveFrom="transform opacity-100 scale-100"
             leaveTo="transform opacity-0 scale-95"
           >
-            <Popover.Panel className="absolute z-10 w-56 p-4 mt-2 text-sm text-black border-2 divide-y divide-gray-300 rounded-md shadow-lg dark:text-gray-100 dark:bg-gray-900 bg-primary border-accent">
+            <Popover.Panel className="absolute z-10 w-56 p-4 mt-2 text-sm text-black border-2 divide-y divide-gray-300 rounded-md shadow-lg shadow-accent dark:text-gray-100 dark:bg-gray-900 bg-primary border-accent">
               <div className="flex flex-col space-y-2">
                 <span>Theme</span>
                 <ThemeChooser />
@@ -66,7 +66,7 @@ function ThemeChooser() {
             <Listbox.Option
               value={"system"}
               className={({ active }) =>
-                `${active ? "text-yellow-900 bg-yellow-100" : "text-gray-900"}
+                `${active ? "text-amber-900 bg-amber-100" : "text-gray-900"}
                     cursor-default select-none relative py-2 pl-10 pr-4`
               }
             >
@@ -82,7 +82,7 @@ function ThemeChooser() {
                   {selected ? (
                     <span
                       className={`${
-                        active ? "text-yellow-600" : "text-yellow-600"
+                        active ? "text-amber-600" : "text-amber-600"
                       }
                                 absolute inset-y-0 left-0 flex items-center pl-3`}
                     >
@@ -95,7 +95,7 @@ function ThemeChooser() {
             <Listbox.Option
               value={"dark"}
               className={({ active }) =>
-                `${active ? "text-yellow-900 bg-yellow-100" : "text-gray-900"}
+                `${active ? "text-amber-900 bg-amber-100" : "text-gray-900"}
                     cursor-default select-none relative py-2 pl-10 pr-4`
               }
             >
@@ -111,7 +111,7 @@ function ThemeChooser() {
                   {selected ? (
                     <span
                       className={`${
-                        active ? "text-yellow-600" : "text-yellow-600"
+                        active ? "text-amber-600" : "text-amber-600"
                       }
                                 absolute inset-y-0 left-0 flex items-center pl-3`}
                     >
@@ -124,7 +124,7 @@ function ThemeChooser() {
             <Listbox.Option
               value={"light"}
               className={({ active }) =>
-                `${active ? "text-yellow-900 bg-yellow-100" : "text-gray-900"}
+                `${active ? "text-amber-900 bg-amber-100" : "text-gray-900"}
                     cursor-default select-none relative py-2 pl-10 pr-4`
               }
             >
@@ -140,7 +140,7 @@ function ThemeChooser() {
                   {selected ? (
                     <span
                       className={`${
-                        active ? "text-yellow-600" : "text-yellow-600"
+                        active ? "text-amber-600" : "text-amber-600"
                       }
                                 absolute inset-y-0 left-0 flex items-center pl-3`}
                     >

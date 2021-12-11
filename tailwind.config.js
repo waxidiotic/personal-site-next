@@ -1,6 +1,9 @@
 module.exports = {
   mode: "jit",
-  purge: ["./pages/**/*.{js,ts,jsx,tsx}", "./components/**/*.{js,ts,jsx,tsx}"],
+  content: [
+    "./pages/**/*.{js,ts,jsx,tsx}",
+    "./components/**/*.{js,ts,jsx,tsx}",
+  ],
   darkMode: "class",
   theme: {
     extend: {
@@ -24,9 +27,6 @@ module.exports = {
         "avatar-orange": `0px 0px 8px 8px var(--accent-color)`,
       }),
     },
-  },
-  variants: {
-    extend: {},
   },
   plugins: [],
 };

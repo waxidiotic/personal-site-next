@@ -5,9 +5,9 @@
 :root {
   --blue-light: theme("colors.blue.600");
   --blue-dark: theme("colors.blue.500");
-  --orange-light: theme("colors.yellow.600");
-  --orange-dark: theme("colors.yellow.500");
-  --orange-faded: theme("colors.yellow.400");
+  --orange-light: theme("colors.amber.600");
+  --orange-dark: theme("colors.amber.500");
+  --orange-faded: theme("colors.amber.400");
   --bg-color: theme("colors.gray.100");
   --text-color: theme("colors.gray.900");
   --text-color-dark: theme("colors.gray.100");
