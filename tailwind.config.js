@@ -1,3 +1,5 @@
+const colors = require("tailwindcss/colors");
+
 module.exports = {
   mode: "jit",
   content: [
@@ -8,23 +10,15 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        accent: "var(--accent-color)",
-        faded: "var(--accent-color-faded)",
-        "blue-light-mode": "var(--blue-light)",
-        "blue-dark-mode": "var(--blue-dark)",
-        "orange-light-mode": "var(--orange-light)",
-        "orange-dark-mode": "var(--orange-dark)",
-      },
-      backgroundColor: {
-        primary: "var(--bg-color)",
+        accent: colors.orange[400],
       },
       textColor: {
-        primary: "var(--text-color)",
-        dark: "var(--text-color-dark)",
-        accent: "var(--accent-color)",
+        primary: colors.gray[900],
+        dark: colors.gray[100],
+        accent: colors.orange[400],
       },
       boxShadow: () => ({
-        "avatar-orange": `0px 0px 8px 8px var(--accent-color)`,
+        "avatar-orange": `0px 0px 8px 8px ${colors.orange[400]}`,
       }),
     },
   },
