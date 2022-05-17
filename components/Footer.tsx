@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { forwardRef } from "react";
 import {
   FaDev,
   FaGithubSquare,
@@ -10,16 +11,24 @@ export function Footer() {
   return (
     <footer className="flex justify-center mt-40 space-x-4 text-sm text-accent">
       <Link href="https://github.com/waxidiotic" passHref>
-        <FaGithubSquare className="cursor-pointer h-7 w-7 hover:text-primary dark:hover:text-dark" />
+        <a>
+          <FaGithubSquare className="cursor-pointer h-7 w-7 hover:text-primary dark:hover:text-dark" />
+        </a>
       </Link>
       <Link href="https://twitter.com/alexbussey" passHref>
-        <FaTwitterSquare className="cursor-pointer h-7 w-7 hover:text-primary dark:hover:text-dark" />
+        <a>
+          <FaTwitterSquare className="cursor-pointer h-7 w-7 hover:text-primary dark:hover:text-dark" />
+        </a>
       </Link>
       <Link href="https://linkedin.com/in/alexbussey" passHref>
-        <FaLinkedin className="cursor-pointer h-7 w-7 hover:text-primary dark:hover:text-dark" />
+        <a>
+          <FaLinkedin className="cursor-pointer h-7 w-7 hover:text-primary dark:hover:text-dark" />
+        </a>
       </Link>
       <Link href="https://dev.to/waxidiotic" passHref>
-        <FaDev className="cursor-pointer h-7 w-7 hover:text-primary dark:hover:text-dark" />
+        <a>
+          <FaDev className="cursor-pointer h-7 w-7 hover:text-primary dark:hover:text-dark" />
+        </a>
       </Link>
     </footer>
   );
