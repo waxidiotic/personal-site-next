@@ -1,0 +1,85 @@
+{
+  "jobs": [
+    {
+      "company_name": "CommonBond",
+      "start_date": "Jan 2022",
+      "end_date": "May 2022",
+      "locations": ["Remote"],
+      "positions": [
+        {
+          "title": "Senior Software Engineer",
+          "description_items": [
+            "Senior Software Engineer specializing in frontend. Responsible for projects integrating a new authentication flow into our applications and planning on a rebrand of our marketing site."
+          ]
+        }
+      ]
+    },
+    {
+      "company_name": "JW Player",
+      "start_date": "Aug 2015",
+      "end_date": "Dec 2021",
+      "locations": ["Remote", "New York, NY"],
+      "positions": [
+        {
+          "title": "Software Engineer, Publisher Workflows",
+          "description_items": [
+            "Frontend-focused software engineer with a concentration on how publishers use our products.",
+            "One of a few engineers tasked with rewriting our dashboard in React and TypeScript, replacing the older Angular codebase."
+          ]
+        },
+        {
+          "title": "Software Engineer, Platform Interfaces",
+          "description_items": [
+            "Fullstack engineer responsible for working on our internal and external APIs and underlying services."
+          ]
+        },
+        {
+          "title": "Software Engineer, Player",
+          "description_items": [
+            "Worked on our JavaScript-based video player which powers some of the most popular sites on the Internet.",
+            "Concentrated on our advertising-plugins but also did a good amount of work on other features, including controls, captions and playback."
+          ]
+        },
+        {
+          "title": "Level 2 JavaScript Engineer",
+          "description_items": [
+            "Responsible for communication between our Sales and Support teams and the Engineering team.",
+            "Took issues and questions submitted to the Engineers, triaging and grooming them before it reached various engineering teams.",
+            "Worked more and more on tickets and bugs myself, working my way towards a full-time Software Engineer position on the Player team."
+          ]
+        },
+        {
+          "title": "Support Team Lead",
+          "description_items": [
+            "Used JavaScript, CSS and HTML to build proof-of-concept examples for customers to show how they could potentially accomplish their use case for using our video player.",
+            "Responsible for training of the Support team in use of JavaScript, CSS and HTML.",
+            "Suggested and helped implement the use of an online front-end development training curriculum. Monitored the team's progress and created firm, but attainable goals to foster education.",
+            "Managed day to day customer support through email, support forums, online documentation and social media.",
+            "Shared knowledge of JW Player products and services with co-workers and customers."
+          ]
+        }
+      ]
+    },
+    {
+      "company_name": "Medidata Solutions",
+      "start_date": "Aug 2012",
+      "end_date": "Jun 2015",
+      "locations": ["New York, NY"],
+      "positions": [
+        {
+          "title": "Business Systems Analyst",
+          "description_items": [
+            "Developed new front-end for end users to enter tickets for assistance or for on-boarding of new employees, deployed using Amazon Web Services. Received plenty of positive feedback on the system from users who found previous experience to be too confusing.",
+            "Responsible for creating and maintaining images for OS X deployment on Macs.",
+            "Go-to resource for executives, including providing support for board meetings, both on-site and off-site, as well as for earnings calls and other high-profile events.",
+            "Supported users in need of assistance, as well as on-boarded users starting employment with Medidata.",
+            "Managed logistics for demo stations, mobile devices and network resources used at external marketing events, such as the Drug Information Association conference, as well as Medidata events. Provided on-site support for many of these events, as well.",
+            "Part of a two-person team responsible for procurement of technology for all of the U.S.",
+            "Project Lead for Enterprise Support team on many projects, including the implementation of our ticketing system and whole disk encryption.",
+            "Part of project management team for several more projects, such as the implementation of enterprise-level single sign-on (SSO) and the upgrading of our anti-virus infrastructure."
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -4,7 +4,7 @@ import type { NextPage } from "next";
 
 import avatarPic from "../public/me.png";
 
-const Home: NextPage = () => {
+export const Home: NextPage = () => {
   return (
     <div>
       <Head>
