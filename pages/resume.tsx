@@ -78,7 +78,14 @@ const Resume: NextPage = ({
       </Head>
       <main>
         <div className="flex flex-col gap-6 mt-24 font-bold">
-          <div className="text-4xl">Resumé</div>
+          <div className="flex justify-between">
+            <div className="text-4xl">Resumé</div>
+            <div className="flex items-end cursor-pointer hover:text-accent">
+              <a href="resume.pdf" download>
+                Download PDF
+              </a>
+            </div>
+          </div>
           {jobs.map((job: Job, i: number) => (
             <Entry key={i} job={job} />
           ))}
