@@ -45,9 +45,6 @@ export const Home: NextPage = () => {
             />
           </div>
         </div>
-        <div className="text-3xl max-w-2xl leading-[44px] font-bold">
-          I am <span className="text-accent">looking for work</span>!
-        </div>
       </main>
     </div>
   );
