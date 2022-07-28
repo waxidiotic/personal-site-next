@@ -12,7 +12,6 @@
       {
         "groups": ["builtin", "external", "parent", "sibling", "index"],
         "pathGroups": [
-          // Sort absolute root imports before parent imports
           {
             "pattern": "/**'",
             "group": "parent",
